@@ -14,7 +14,7 @@ import time
 driver = webdriver.Chrome()
 driver.get("https://sigma.innsandbox.com/")
 assert 'Sigma Analytics: Unlock The Potential of Data' == driver.title
-driver.find_element(by=By.CLASS_NAME, value = 'login-span').click()
+driver.find_element(by=By.CLASS_NAME, value='login-span').click()
 #driver.find_element_by_name('login').click()
 #driver.find_element(By.ID, 'submit').click()
 
@@ -43,6 +43,11 @@ time.sleep(2)
 #driver.find_element_by_name('pass').send_keys('01002977342ass')
 #driver.find_element(By.ID, 'pass').send_keys('01002977342ass')
 
-driver.find_element(by=By.CLASS_NAME, value = 'login-pass-btn').click()
+driver.find_element(by=By.CLASS_NAME, value='login-pass-btn').click()
 #driver.find_element_by_name('login').click()
 #driver.find_element(By.ID, 'submit').click()
+
+driver.find_element(by=By.CLASS_NAME, value='menu-details active-menu').click()
+
+driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+

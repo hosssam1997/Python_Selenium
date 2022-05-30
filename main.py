@@ -54,4 +54,7 @@ def test_login(driver):
     driver.find_element(by=By.CLASS_NAME, value = 'login-pass-btn').click()
     #driver.find_element_by_name('login').click()
     #driver.find_element(By.ID, 'submit').click()
+
+
+
     assert '' in driver.current_url
